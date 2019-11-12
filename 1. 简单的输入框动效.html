@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="input-container">
+    <input class="input" type="text">
+    <span class="border"></span>
+  </div>
+</body>
+</html>
+
+<style>
+.input-container {
+  position: relative;
+  width: 200px;
+}
+.input {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  height: 35px;
+}
+.border {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: blue;
+}
+.input:focus {
+  border: 0;
+  outline: 0;
+}
+.input:focus ~ .border {
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+</style>
